@@ -1,0 +1,45 @@
+img.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  margin: 10px;
+}
+
+.container {
+  margin-top: 10vh;
+}
+.container .columns {
+  margin-top: 10vh;
+}
+.docs-menu {
+  margin-right: 2rem;
+  width: 100%;
+}
+menu-item {
+  padding: 8px 60px 8px 10px;
+}
+@media (max-width: 996px) {
+  .menu {
+    width: 100%;
+  }
+}
+
+footer ul.left {
+  float: left;
+  list-style-type: none;
+}
+footer ul li {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+footer ul li {
+  float:right;
+  padding-left:10px;
+  padding-right: 10px;
+}
+footer ul.right {
+  float: right;
+  list-style-type: none;
+}

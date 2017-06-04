@@ -1,0 +1,11 @@
+- name: introduction
+  url: /
+
+- name: how-to-start
+  url: /how-to-start/
+
+- name: usage
+  url: /usage/
+
+- name: license
+  url: /license/

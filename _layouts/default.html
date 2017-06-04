@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+Copyright 2017 Ankit R Gadiya <me@argp.in>
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>
+      Targ | {{ site.title }} {% if page.title %} - {{ page.title }} {% endif %}
+    </title>
+
+
+    <!-- Primer CSS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Primer/5.1.0/css/primer.css" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/documentation.css">
+  </head>
+
+  <body>
+
+    <!-- Logo -->
+    <a href="/">
+      <img src="{{site.baseurl}}/assets/images/logo.png" class="logo">
+    </a>
+
+    <!-- Main Container -->
+    <div class="container">
+
+      <!-- Title -->
+      <h1 class="border-bottom p-3 mb-3 title">{{ site.title }}</h1>
+
+      <div class="columns docs-layout">
+
+        <!-- Column for navigation -->
+        <div class="one-fourths column">
+
+          <!-- Table of Content -->
+          <nav class="menu docs-menu">
+            <span class="menu-heading">Table of Content</span>
+
+            {% for item in site.data.navigation %}
+
+            {% if page.group == item.name %}
+            <a class="menu-item selected" href="{{site.baseurl}}{{ item.url }}">
+              {{ item.name | capitalize | replace: "-", " " }}
+            </a>
+            {% elsif  page.permalink == item.url %}
+            <a class="menu-item selected" href="{{site.baseurl}}{{ item.url }}">
+              {{ item.name | capitalize | replace: "-", " " }}
+            </a>
+            {% else %}
+            <a class="menu-item" href="{{site.baseurl}}{{ item.url }}">
+              {{ item.name | capitalize | replace: "-", " " }}
+            </a>
+            {% endif %}
+
+            {% endfor %}
+          </nav>
+
+          <!-- Second level Table of Content for Sub sections -->
+          {% if page.group %}
+          <nav class="menu docs-menu">
+            <span class="menu-heading">{{ page.group | capitalize }}</span>
+
+            {% for item in site.data[page.group] %}
+
+            {% if page.url == item.url %}
+            <a class="menu-item selected" href="{{site.baseurl}}{{ item.url }}">
+              {{ item.name }}
+            </a>
+            {% else %}
+            <a class="menu-item" href="{{site.baseurl}}{{ item.url }}">
+              {{ item.name }}
+            </a>
+            {% endif %}
+
+            {% endfor %}
+          </nav>
+          {% endif %}
+
+        </div>
+        <!-- Column for navigation ends here -->
+
+        <!-- Content column -->
+        <div class="three-fourths column">
+          <h2 class="page-title mb-3 text-left">{{page.title}}</h2>
+
+          <div class="markdown-body">
+            {{ content }}
+          </div>
+        </div>
+        <!-- Content column ends here -->
+
+      </div>
+
+    </div>
+    <!-- Main Container ends here -->
+
+    <!-- Footer -->
+    <footer>
+
+      <div class="container border-top p-3 mb-3 title">
+
+        <!-- Left -->
+        <ul class="left">
+          <li>Copyright &copy; <a href="{{ site.author-link }}">
+            {{ site.author }}
+          </a></li>
+        </ul>
+
+        <!-- Right -->
+        <ul class="right">
+          <li><a href="/">Targ</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+
+      </div>
+
+    </footer>
+    <!-- Footer ends here -->
+
+  </body>
+</html>
