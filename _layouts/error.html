@@ -1,34 +1,92 @@
+<!--
+Copyright 2017 Ankit R Gadiya <me@argp.in>
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      Targ | {{ site.title }} {% if page.title %} - {{ page.title }} {% endif %}
+      Targ | Documentation Title {% if page.title %}- {{page.title}}{% endif %}
     </title>
 
-    <!-- Primer CSS -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/Primer/5.1.0/css/primer.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/documentation.css" />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/documentation.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <a href="/">
-      <img src="{{site.baseurl}}/assets/images/logo.png" class="logo">
-    </a>
 
+    <!-- Header -->
+    <header class="jumbotron">
+      <a href="/">
+        <img src="{{site.baseurl}}/assets/images/logo.png"
+        class="logo" alt="Logo" />
+      </a>
 
-    <div class="container">
-      <h1 class="border-bottom p-3 mb-3 title">{{ site.title }}</h1>
-      <div class="columns docs-layout">
+      <h1 class="text-center">{{site.title}}</h1>
+      <hr />
+    </header>
 
-          <div class="blankslate blankslate-large blankslate-spacious">
-            <span class="mega-octicon octicon-book blankslate-icon "></span>
-            <h3>This page does not exist</h3>
+    <!-- Main -->
+    <main class="container error">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <span class="text">
+            This page does not exist.
+          </span>
+          <ul class="list-inline">
+            <li>
+              <a href="/">Targ</a>
+            </li>
+            <li>
+              <a href="{{site.baseurl}}">{{site.title}}</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-md-4 text-center">
+            {{site.time | date: '%Y'}} &copy; {{site.author}}
+          </div>
+          <div class="col-sm-4 col-md-4 text-center">
+            <a href="https://github.com/targ-project/{{site.repo}}">
+              Contribute
+            </a>
+          </div>
+          <div class="col-sm-4 col-md-4 text-center">
+            Proudly hosted by
+            <a href="https://pages.github.com">Github Pages</a>
           </div>
         </div>
-    </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>

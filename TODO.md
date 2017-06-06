@@ -1,3 +1,3 @@
 # Todo
 
-* Make the template responsive
+* [x] Make the template responsive

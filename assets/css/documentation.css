@@ -1,45 +1,71 @@
-img.logo {
+/* Header */
+header.jumbotron {
+  background-color: white;
+  font-family: "Times New Roman";
+}
+header.jumbotron img.logo {
   position: absolute;
   top: 0;
   left: 0;
   height: 40px;
   margin: 10px;
 }
-
-.container {
-  margin-top: 10vh;
+header.jumbotron h1 {
+  font-size: 2.5em;
 }
-.container .columns {
-  margin-top: 10vh;
-}
-.docs-menu {
-  margin-right: 2rem;
-  width: 100%;
-}
-menu-item {
-  padding: 8px 60px 8px 10px;
-}
-@media (max-width: 996px) {
-  .menu {
-    width: 100%;
-  }
+header.jumbotron h1 + hr {
+  width: 50%;
 }
 
-footer ul.left {
-  float: left;
-  list-style-type: none;
+/* Revision */
+.revision {
+  padding: 20px;
+  margin-bottom: 5vh;
 }
-footer ul li {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
+.revision h2 {
+  font-size: 1.5em;
 }
-footer ul li {
-  float:right;
-  padding-left:10px;
-  padding-right: 10px;
+.revision table {
+  width: 50%;
 }
-footer ul.right {
-  float: right;
-  list-style-type: none;
+.revision table tr th {
+  width: auto !important;
+}
+
+/* Main */
+main ul.nav {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 5vh;
+}
+main .nav-pills > li > a {
+  border-radius: 0;
+}
+main ul.nav li.disabled {
+  font-weight: bold;
+    background: #eeeeee;
+}
+main .body h2 + hr {
+  margin-bottom: 50px;
+}
+
+/* Footer */
+footer.jumbotron {
+  margin-top: 10vh;
+  margin-bottom: 0;
+}
+
+/* Error */
+main.error {
+  height: 40vh;
+  padding-top: 10vh;
+}
+main.error .text {
+  font-size: 1.5em;
+}
+main.error ul {
+  margin-top: 5vh;
+}
+main.error li+li:before {
+  content: "|";
+  margin: 0px 15px 0px 5px;
 }
