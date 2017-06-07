@@ -4,17 +4,18 @@ permalink: /
 title: Introduction
 ---
 
-This is the Jekyll based Web template designed by Ankit R Gadiya for the
-documentation on Targ.ga.
+This is the Jekyll based Web template designed to be used on
+[Targ Project](https://targ.ga).
 
 ### Features:
-* Github Markdown
-* Table of Contents
-* Internal Table for each Section using Groups in Jekyll
-* Simple and Light-weight and fast
+* Table of Contents.
+* Internal Table for each Section using Groups in Jekyll.
+* Simple and Light-weight and fast.
+* Responsive design.
+* Supports revision history.
 
 ### Credits:
-* [PrimerCSS](http://primercss.io)
+* [Bootstrap Framework](https://getbootstrap.com/)
 
 ### License:
 [GNU General Public License version 3](license)
