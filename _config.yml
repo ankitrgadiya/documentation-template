@@ -13,7 +13,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 title: Documentation Title
-baseurl: /documentation-template
+baseurl: /
 author: Ankit R Gadiya
 author-link: https://ankitrgadiya.in
 repo: documentation-template
